@@ -1,0 +1,42 @@
+// Заголовки, общие БЄМ блоки и проче...
+.page {
+	// .page__hero
+	&__hero {
+		@include adaptiveValue("padding-top", 80, 40, 0, 690, 320);
+		@include adaptiveValue("padding-bottom", 80, 40, 0, 690, 320);
+	}
+	// .page__collection
+	&__collection {
+		@include adaptiveValue("padding-top", 80, 40, 0, 1050, 690);
+		@include adaptiveValue("padding-bottom", 80, 40, 0, 1050, 690);
+	}
+	// .page__ceators
+	&__ceators {
+		@include adaptiveValue("padding-top", 80, 40, 0, 1050, 690);
+		@include adaptiveValue("padding-bottom", 80, 40, 0, 1050, 690);
+	}
+	// .page__categories
+	&__categories {
+		@include adaptiveValue("padding-top", 80, 40, 0, 1050, 690);
+		@include adaptiveValue("padding-bottom", 80, 40, 0, 1050, 690);
+	}
+	// .page__discover
+	&__discover {
+		@include adaptiveValue("padding-top", 80, 40, 0, 1050, 690);
+		@include adaptiveValue("padding-bottom", 80, 40, 0, 1050, 690);
+	}
+	// .page__mashrooms
+	&__mashrooms {
+		@include adaptiveValue("padding-bottom", 60, 40, 0, 690, 320);
+	}
+	// .page__works
+	&__works {
+		@include adaptiveValue("padding-top", 80, 40, 0, 1050, 690);
+		@include adaptiveValue("padding-bottom", 80, 40, 0, 1050, 690);
+	}
+	// .page__digest
+	&__digest {
+		@include adaptiveValue("padding-top", 80, 40, 0, 1050, 690);
+		@include adaptiveValue("padding-bottom", 80, 40, 0, 690, 320);
+	}
+}
