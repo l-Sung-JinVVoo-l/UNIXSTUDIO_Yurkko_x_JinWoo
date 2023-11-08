@@ -1,35 +1,36 @@
 //=========================================================
 .page {
-	// .page__hero
-	&__hero {
-		background: url("@img/hero/shadow.jpg") no-repeat;
-		background-size: cover;
-		background-position: left bottom;
-	}
-	@media (max-width: 400px) {
-		&__hero {
-			background: url("@img/hero/shadow-adaptive.jpg");
-			background-size: cover;
-		}
-	}
+  // .page__hero
+  &__hero {
+    background: url('@img/hero/shadow.jpg') no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+  }
+  @media (max-width: 400px) {
+    &__hero {
+      background: url('@img/hero/shadow-adaptive.jpg');
+      background-size: cover;
+    }
+  }
 }
 .hero {
-	overflow: hidden;
-	position: relative;
-	// .hero__container
-	&__container {
-		position: relative;
-		z-index: 2;
-		display: flex;
-		flex-direction: column;
-		row-gap: toRem(260);
-	}
-	// .hero__top
-	&__top {
-	}
-	// .hero__bottom
-	&__bottom {
-	}
+  overflow: hidden;
+  //   background: #1a1a1a;
+  position: relative;
+  // .hero__container
+  &__container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(260);
+  }
+  // .hero__top
+  &__top {
+  }
+  // .hero__bottom
+  &__bottom {
+  }
 }
 
 .titles {
@@ -38,8 +39,8 @@
   }
 }
 .top-hero {
-	display: flex;
-	@include adaptiveValue("column-gap", 80, 30, 0, 1280, 768.98);
+  display: flex;
+  @include adaptiveValue('column-gap', 80, 30, 0, 1280, 768.98);
 
   @media (max-width: $mobile) {
     flex-direction: column;
@@ -71,9 +72,9 @@
 }
 
 .titles {
-	// .titles__title
-	&__title {
-	}
+  // .titles__title
+  &__title {
+  }
 }
 .hero-bottom {
   display: flex;

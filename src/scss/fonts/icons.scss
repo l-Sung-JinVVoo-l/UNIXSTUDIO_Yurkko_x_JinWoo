@@ -1,30 +1,29 @@
 %ic {
-	font-family: "icons";
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-family: 'icons';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-[class*="_icon-"] {
-	&:before {
-		@extend %ic;
-		display: block;
-	}
+[class*='_icon-'] {
+  &:before {
+    @extend %ic;
+    display: block;
+  }
 }
 
 ._icon-arrow:before {
-	content: "\e900";
- }
- ._icon-Circle-Button:before {
-	content: "\e901";
- }
- ._icon-Forgings:before {
-	content: "\e903";
- }
- ._icon-stars:before {
-	content: "\e904";
- }
- 
+  content: '\e900';
+}
+._icon-Circle-Button:before {
+  content: '\e901';
+}
+._icon-Forgings:before {
+  content: '\e903';
+}
+._icon-stars:before {
+  content: '\e904';
+}
