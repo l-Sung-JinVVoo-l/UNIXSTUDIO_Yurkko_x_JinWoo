@@ -74,3 +74,31 @@
 	}
 }
 //===========================================================================
+// Для родителя блока
+/* 
+	&__titles {
+		transform: translate(0px, 700px);
+		display: flex;
+		flex-direction: column;
+		gap: toRem(40);
+		max-width: toRem(860);
+	} 
+	*/
+.titles {
+	font-family: Panchang;
+	text-transform: uppercase;
+	// .titles__title
+	&__title {
+		@include adaptiveValue("font-size", 64, 32);
+		font-weight: 700;
+		line-height: math.div(68, 64);
+		letter-spacing: -0.64px;
+	}
+	// .titles__text
+	&__text {
+		@include adaptiveValue("font-size", 32, 16);
+		font-weight: 600;
+		line-height: math.div(42, 32);
+		letter-spacing: -0.32px;
+	}
+}
