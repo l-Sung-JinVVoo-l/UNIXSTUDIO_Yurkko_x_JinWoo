@@ -4,32 +4,37 @@
   &__hero {
     background: url('@img/hero/shadow.jpg') no-repeat;
     background-size: cover;
-    background-position: left bottom;
+    background-position: center bottom;
   }
   @media (max-width: 400px) {
     &__hero {
       background: url('@img/hero/shadow-adaptive.jpg');
       background-size: cover;
+      background-position: center bottom;
     }
   }
 }
 .hero {
   overflow: hidden;
-  //   background: #1a1a1a;
   position: relative;
-  // .hero__container
-  &__container {
+  // .hero__content
+  &__content {
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
-    row-gap: toRem(260);
+    @include adaptiveValue('row-gap', 260, 155);
   }
   // .hero__top
   &__top {
   }
   // .hero__bottom
   &__bottom {
+  }
+  .bottom-border {
+    height: 2px;
+    @include adaptiveValue('bottom', -80, -20);
+    background-color: #d0d0d0;
   }
 }
 
