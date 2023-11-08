@@ -1,78 +1,87 @@
 //=========================================================
 .page {
-	// .page__hero
-	&__hero {
-	}
+  // .page__hero
+  &__hero {
+    background: url('@img/hero/shadow.jpg') no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+  }
+  @media (max-width: 400px) {
+    &__hero {
+      background: url('@img/hero/shadow-adaptive.jpg');
+      background-size: cover;
+    }
+  }
 }
 .hero {
-	overflow: hidden;
-	background: #1a1a1a;
-	position: relative;
-	// .hero__container
-	&__container {
-		position: relative;
-		z-index: 2;
-		display: flex;
-		flex-direction: column;
-		row-gap: toRem(260);
-	}
-	// .hero__top
-	&__top {
-	}
-	// .hero__bottom
-	&__bottom {
-	}
+  overflow: hidden;
+  //   background: #1a1a1a;
+  position: relative;
+  // .hero__container
+  &__container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(260);
+  }
+  // .hero__top
+  &__top {
+  }
+  // .hero__bottom
+  &__bottom {
+  }
 }
 .top-hero {
-	display: flex;
-	@include adaptiveValue("column-gap", 80, 30, 0, 1280, 768.98);
+  display: flex;
+  @include adaptiveValue('column-gap', 80, 30, 0, 1280, 768.98);
 
-	@media (max-width: $mobile) {
-		flex-direction: column;
-		row-gap: toRem(20);
-	}
-	// .top-hero__titles
-	&__titles {
-		color: #fff;
-		display: flex;
-		flex-direction: column;
-		gap: toRem(40);
-		max-width: min-content;
-		@include adaptiveValue("font-size", 96, 32);
-		font-weight: 700;
-		line-height: 96px; /* 100% */
-		letter-spacing: -1.92px;
-		text-transform: uppercase;
-	}
-	&__decor {
-		@include adaptiveValue("font-size", 160, 80);
-		color: #fff;
-		@media (max-width: $mobile) {
-			align-self: end;
-			@include adaptiveValue("translate", -100, -20, 0, 767.98, 320);
-		}
-	}
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    row-gap: toRem(20);
+  }
+  // .top-hero__titles
+  &__titles {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: toRem(40);
+    max-width: min-content;
+    @include adaptiveValue('font-size', 96, 32);
+    font-weight: 700;
+    line-height: 96px; /* 100% */
+    letter-spacing: -1.92px;
+    text-transform: uppercase;
+  }
+  &__decor {
+    @include adaptiveValue('font-size', 160, 80);
+    color: #fff;
+    @media (max-width: $mobile) {
+      align-self: end;
+      @include adaptiveValue('translate', -100, -20, 0, 767.98, 320);
+    }
+  }
 }
 .titles {
-	// .titles__title
-	&__title {
-	}
+  // .titles__title
+  &__title {
+  }
 }
 .hero-bottom {
-	// .hero-bottom__text
-	&__text {
-		color: #121212;
-		@include adaptiveValue("font-size", 24, 18);
-		line-height: math.div( 32, 24);
-		letter-spacing: 0.36px;
-		flex: 0 1 590px;
-	}
+  // .hero-bottom__text
+  &__text {
+    color: #121212;
+    @include adaptiveValue('font-size', 24, 18);
+    line-height: math.div(32, 24);
+    letter-spacing: 0.36px;
+    flex: 0 1 590px;
+  }
 
-	&__decor {
-		font-size: toRem(160);
-		color: #fff;
-		display: inline-block;
-		border-radius: 50%;
-		background: #000;
-	}
+  &__decor {
+    font-size: toRem(160);
+    color: #fff;
+    display: inline-block;
+    border-radius: 50%;
+    background: #000;
+  }
 }

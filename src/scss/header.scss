@@ -3,6 +3,7 @@
   background-color: #1a1a1a;
   color: #fff;
   padding-top: 20px;
+  z-index: 10;
   // .header__container
   &__container {
     min-height: toRem(22);
