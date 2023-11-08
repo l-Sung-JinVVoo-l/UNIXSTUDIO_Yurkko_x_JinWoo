@@ -1,77 +1,99 @@
 @font-face {
-	font-family: Hubot;
-	font-display: swap;
-	src: url("../fonts/Hubot-Sans-Bold.woff2") format("woff2"), url("../fonts/Hubot-Sans-Bold.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
+  font-family: Hubot;
+  font-display: swap;
+  src:
+    url('../fonts/Hubot-Sans-Bold.woff2') format('woff2'),
+    url('../fonts/Hubot-Sans-Bold.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
-	font-family: Hubot;
-	font-display: swap;
-	src: url("../fonts/Hubot-Sans-SemiBold.woff2") format("woff2"), url("../fonts/Hubot-Sans-SemiBold.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
+  font-family: Hubot;
+  font-display: swap;
+  src:
+    url('../fonts/Hubot-Sans-SemiBold.woff2') format('woff2'),
+    url('../fonts/Hubot-Sans-SemiBold.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
-	font-family: Hubot;
-	font-display: swap;
-	src: url("../fonts/Hubot-Sans-RegularSemi.woff2") format("woff2"), url("../fonts/Hubot-Sans-RegularSemi.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
+  font-family: Hubot;
+  font-display: swap;
+  src:
+    url('../fonts/Hubot-Sans-RegularSemi.woff2') format('woff2'),
+    url('../fonts/Hubot-Sans-RegularSemi.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
-	font-family: Hubot;
-	font-display: swap;
-	src: url("../fonts/Hubot-Sans-Regular.woff2") format("woff2"), url("../fonts/Hubot-Sans-Regular.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
+  font-family: Hubot-Sans-Regular;
+  font-display: swap;
+  src:
+    url('../fonts/Hubot-Sans-Regular.woff2') format('woff2'),
+    url('../fonts/Hubot-Sans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
-	font-family: Hubot;
-	font-display: swap;
-	src: url("../fonts/Hubot-Sans-Medium.woff2") format("woff2"), url("../fonts/Hubot-Sans-Medium.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
+  font-family: Hubot;
+  font-display: swap;
+  src:
+    url('../fonts/Hubot-Sans-Medium.woff2') format('woff2'),
+    url('../fonts/Hubot-Sans-Medium.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
-	font-family: NeueHaasDisplayRoman;
-	font-display: swap;
-	src: url("../fonts/NeueHaasDisplayRoman.woff2") format("woff2"), url("../fonts/NeueHaasDisplayRoman.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
+  font-family: NeueHaasDisplayRoman;
+  font-display: swap;
+  src:
+    url('../fonts/NeueHaasDisplayRoman.woff2') format('woff2'),
+    url('../fonts/NeueHaasDisplayRoman.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
-	font-family: icons;
-	font-display: swap;
-	src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
+  font-family: icons;
+  font-display: swap;
+  src:
+    url('../fonts/icons.woff2') format('woff2'),
+    url('../fonts/icons.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
-	font-family: Panchang;
-	font-display: swap;
-	src: url("../fonts/Panchang-Bold.woff2") format("woff2"), url("../fonts/Panchang-Bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
+  font-family: Panchang;
+  font-display: swap;
+  src:
+    url('../fonts/Panchang-Bold.woff2') format('woff2'),
+    url('../fonts/Panchang-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
 }
 @font-face {
-	font-family: NeueHaasDisplayLight;
-	font-display: swap;
-	src: url("../fonts/NeueHaasDisplayLight.woff2") format("woff2"), url("../fonts/NeueHaasDisplayLight.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
+  font-family: NeueHaasDisplayLight;
+  font-display: swap;
+  src:
+    url('../fonts/NeueHaasDisplayLight.woff2') format('woff2'),
+    url('../fonts/NeueHaasDisplayLight.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
-	font-family: Panchang;
-	font-display: swap;
-	src: url("../fonts/Panchang-Medium.woff2") format("woff2"), url("../fonts/Panchang-Medium.woff") format("woff");
-	font-weight: 500;
-	font-style: normal;
+  font-family: Panchang;
+  font-display: swap;
+  src:
+    url('../fonts/Panchang-Medium.woff2') format('woff2'),
+    url('../fonts/Panchang-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
 }
 @font-face {
-	font-family: Panchang;
-	font-display: swap;
-	src: url("../fonts/Panchang-Semibold.woff2") format("woff2"), url("../fonts/Panchang-Semibold.woff") format("woff");
-	font-weight: 600;
-	font-style: normal;
+  font-family: Panchang;
+  font-display: swap;
+  src:
+    url('../fonts/Panchang-Semibold.woff2') format('woff2'),
+    url('../fonts/Panchang-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
 }
