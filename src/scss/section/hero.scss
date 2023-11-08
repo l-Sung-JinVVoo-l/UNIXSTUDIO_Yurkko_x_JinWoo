@@ -9,6 +9,7 @@
 	overflow: hidden;
 	background: #000;
 	padding-bottom: toRem(800);
+	z-index: -1;
 	position: relative;
 	// .hero__shadow
 	&__shadow {
@@ -23,6 +24,13 @@
 	}
 	// .hero__container
 	&__container {
+	}
+	&__titles {
+		transform: translate(0px, 700px);
+		display: flex;
+		flex-direction: column;
+		gap: toRem(40);
+		max-width: toRem(860);
 	}
 }
 
