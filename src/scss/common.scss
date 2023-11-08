@@ -1,50 +1,50 @@
 // Заголовки, общие БЄМ блоки и проче...
 .page {
-	// .page__hero
-	&__hero {
-		@include adaptiveValue("padding-top", 170, 160);
-		@include adaptiveValue("padding-bottom", 80, 20);
-	}
-	// .page__find
-	&__find {
-		@include adaptiveValue("padding-top", 80, 40);
-		@include adaptiveValue("padding-bottom", 80, 40);
-	}
-	// .page__behold
-	&__behold {
-		@include adaptiveValue("padding-top", 80, 40);
-		@include adaptiveValue("padding-bottom", 80, 40);
-	}
-	// .page__witness
-	&__witness {
-		@include adaptiveValue("padding-top", 80, 40);
-		@include adaptiveValue("padding-bottom", 80, 40);
-	}
-	// .page__ceo
-	&__ceo {
-		@include adaptiveValue("padding-top", 80, 40);
-		@include adaptiveValue("padding-bottom", 80, 40);
-	}
-	// .page__marque
-	&__marque {
-		@include adaptiveValue("padding-top", 80, 40);
-		@include adaptiveValue("padding-bottom", 80, 40);
-	}
-	// .page__project
-	&__project {
-		@include adaptiveValue("padding-top", 80, 40);
-		@include adaptiveValue("padding-bottom", 80, 40);
-	}
-	// .page__worthy
-	&__worthy {
-		@include adaptiveValue("padding-top", 80, 40);
-		@include adaptiveValue("padding-bottom", 80, 40);
-	}
-	// .page__clients
-	&__clients {
-		@include adaptiveValue("padding-top", 80, 40);
-		@include adaptiveValue("padding-bottom", 80, 40);
-	}
+  // .page__hero
+  &__hero {
+    @include adaptiveValue('padding-top', 100, 100);
+    @include adaptiveValue('padding-bottom', 80, 20);
+  }
+  // .page__find
+  &__find {
+    @include adaptiveValue('padding-top', 80, 40);
+    @include adaptiveValue('padding-bottom', 80, 40);
+  }
+  // .page__behold
+  &__behold {
+    @include adaptiveValue('padding-top', 80, 40);
+    @include adaptiveValue('padding-bottom', 80, 40);
+  }
+  // .page__witness
+  &__witness {
+    @include adaptiveValue('padding-top', 80, 40);
+    @include adaptiveValue('padding-bottom', 80, 40);
+  }
+  // .page__ceo
+  &__ceo {
+    @include adaptiveValue('padding-top', 80, 40);
+    @include adaptiveValue('padding-bottom', 80, 40);
+  }
+  // .page__marque
+  &__marque {
+    @include adaptiveValue('padding-top', 80, 40);
+    @include adaptiveValue('padding-bottom', 80, 40);
+  }
+  // .page__project
+  &__project {
+    @include adaptiveValue('padding-top', 80, 40);
+    @include adaptiveValue('padding-bottom', 80, 40);
+  }
+  // .page__worthy
+  &__worthy {
+    @include adaptiveValue('padding-top', 80, 40);
+    @include adaptiveValue('padding-bottom', 80, 40);
+  }
+  // .page__clients
+  &__clients {
+    @include adaptiveValue('padding-top', 80, 40);
+    @include adaptiveValue('padding-bottom', 80, 40);
+  }
 }
 //============================================================================
 
@@ -89,19 +89,19 @@
 	} 
 	*/
 .titles {
-	font-family: Panchang;
-	text-transform: uppercase;
-	// .titles__title
-	&__title {
-		font-weight: 700;
-		line-height: math.div(68, 64);
-		letter-spacing: -0.64px;
-	}
-	// .titles__text
-	&__text {
-		@include adaptiveValue("font-size", 32, 16);
-		font-weight: 600;
-		line-height: math.div(42, 32);
-		letter-spacing: -0.32px;
-	}
+  font-family: Panchang;
+  text-transform: uppercase;
+  // .titles__title
+  &__title {
+    font-weight: 700;
+    line-height: math.div(68, 64);
+    letter-spacing: -0.64px;
+  }
+  // .titles__text
+  &__text {
+    @include adaptiveValue('font-size', 32, 16);
+    font-weight: 600;
+    line-height: math.div(42, 32);
+    letter-spacing: -0.32px;
+  }
 }

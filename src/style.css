@@ -1,7 +1,8 @@
 @font-face {
   font-family: 'icons';
-  src:  url('fonts/icons.eot?k6efdn');
-  src:  url('fonts/icons.eot?k6efdn#iefix') format('embedded-opentype'),
+  src: url('fonts/icons.eot?k6efdn');
+  src:
+    url('fonts/icons.eot?k6efdn#iefix') format('embedded-opentype'),
     url('fonts/icons.ttf?k6efdn') format('truetype'),
     url('fonts/icons.woff?k6efdn') format('woff'),
     url('fonts/icons.svg?k6efdn#icons') format('svg');
@@ -10,7 +11,8 @@
   font-display: block;
 }
 
-[class^="_icon-"], [class*=" _icon-"] {
+[class^='_icon-'],
+[class*=' _icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icons' !important;
   speak: never;
@@ -24,4 +26,3 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
