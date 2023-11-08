@@ -29,7 +29,7 @@
 
 	@media (max-width: $mobile) {
 		flex-direction: column;
-		row-gap: toRem(20);
+		row-gap: toRem(10);
 	}
 	// .top-hero__titles
 	&__titles {
@@ -38,7 +38,7 @@
 		flex-direction: column;
 		gap: toRem(40);
 		max-width: min-content;
-		@include adaptiveValue("font-size", 96, 32);
+		@include adaptiveValue("font-size", 96, 28);
 		font-weight: 700;
 		line-height: 96px; /* 100% */
 		letter-spacing: -1.92px;
@@ -47,6 +47,7 @@
 	&__decor {
 		@include adaptiveValue("font-size", 160, 80);
 		color: #fff;
+		translate: 0 43px;
 		@media (max-width: $mobile) {
 			align-self: end;
 			@include adaptiveValue("translate", -100, -20, 0, 767.98, 320);
@@ -59,20 +60,31 @@
 	}
 }
 .hero-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: toRem(20);
+	@media (max-width:$mobile){
+		 flex-direction: column-reverse;
+
+	}
 	// .hero-bottom__text
 	&__text {
-		color: #121212;
+		color: #D0D0D0;
 		@include adaptiveValue("font-size", 24, 18);
 		line-height: math.div( 32, 24);
 		letter-spacing: 0.36px;
-		flex: 0 1 590px;
+		max-width: toRem(590);
 	}
 
 	&__decor {
-		font-size: toRem(160);
+		@include adaptiveValue("font-size", 160, 120);
 		color: #fff;
 		display: inline-block;
 		border-radius: 50%;
 		background: #000;
+		@media (max-width:$mobile){
+			 align-self: end; 
+		}
 	}
 }
