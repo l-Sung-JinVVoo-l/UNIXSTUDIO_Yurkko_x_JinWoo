@@ -2,41 +2,75 @@
 .page {
 	// .page__hero
 	&__hero {
-		@include adaptiveValue("padding-top", 80, 40, 0, 690, 320);
-		@include adaptiveValue("padding-bottom", 80, 40, 0, 690, 320);
+		@include adaptiveValue("padding-top", 80, 40);
+		@include adaptiveValue("padding-bottom", 80, 40);
 	}
-	// .page__collection
-	&__collection {
-		@include adaptiveValue("padding-top", 80, 40, 0, 1050, 690);
-		@include adaptiveValue("padding-bottom", 80, 40, 0, 1050, 690);
+	// .page__find
+	&__find {
+		@include adaptiveValue("padding-top", 80, 40);
+		@include adaptiveValue("padding-bottom", 80, 40);
 	}
-	// .page__ceators
-	&__ceators {
-		@include adaptiveValue("padding-top", 80, 40, 0, 1050, 690);
-		@include adaptiveValue("padding-bottom", 80, 40, 0, 1050, 690);
+	// .page__behold
+	&__behold {
+		@include adaptiveValue("padding-top", 80, 40);
+		@include adaptiveValue("padding-bottom", 80, 40);
 	}
-	// .page__categories
-	&__categories {
-		@include adaptiveValue("padding-top", 80, 40, 0, 1050, 690);
-		@include adaptiveValue("padding-bottom", 80, 40, 0, 1050, 690);
+	// .page__witness
+	&__witness {
+		@include adaptiveValue("padding-top", 80, 40);
+		@include adaptiveValue("padding-bottom", 80, 40);
 	}
-	// .page__discover
-	&__discover {
-		@include adaptiveValue("padding-top", 80, 40, 0, 1050, 690);
-		@include adaptiveValue("padding-bottom", 80, 40, 0, 1050, 690);
+	// .page__ceo
+	&__ceo {
+		@include adaptiveValue("padding-top", 80, 40);
+		@include adaptiveValue("padding-bottom", 80, 40);
 	}
-	// .page__mashrooms
-	&__mashrooms {
-		@include adaptiveValue("padding-bottom", 60, 40, 0, 690, 320);
+	// .page__marque
+	&__marque {
+		@include adaptiveValue("padding-top", 80, 40);
+		@include adaptiveValue("padding-bottom", 80, 40);
 	}
-	// .page__works
-	&__works {
-		@include adaptiveValue("padding-top", 80, 40, 0, 1050, 690);
-		@include adaptiveValue("padding-bottom", 80, 40, 0, 1050, 690);
+	// .page__project
+	&__project {
+		@include adaptiveValue("padding-top", 80, 40);
+		@include adaptiveValue("padding-bottom", 80, 40);
 	}
-	// .page__digest
-	&__digest {
-		@include adaptiveValue("padding-top", 80, 40, 0, 1050, 690);
-		@include adaptiveValue("padding-bottom", 80, 40, 0, 690, 320);
+	// .page__worthy
+	&__worthy {
+		@include adaptiveValue("padding-top", 80, 40);
+		@include adaptiveValue("padding-bottom", 80, 40);
+	}
+	// .page__clients
+	&__clients {
+		@include adaptiveValue("padding-top", 80, 40);
+		@include adaptiveValue("padding-bottom", 80, 40);
 	}
 }
+//============================================================================
+
+.shadow {
+	&::before {
+		content: "";
+		background: url("@img/hero/Vector.svg") 0 0 / contain no-repeat;
+		position: absolute;
+		width: 100%;
+		height: 60vh; /* 60vh */
+		bottom: 20%;
+		left: 15%;
+		@media (max-width: $mobileSmall) {
+			height: 48vh;
+			left: 8%;
+			width: 150%;
+		}
+	}
+	img {
+		object-fit: cover;
+		object-position: 27% bottom;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		bottom: 0;
+		left: 0%;
+	}
+}
+//===========================================================================
