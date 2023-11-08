@@ -1,5 +1,4 @@
 //=========================================================
-
 .page {
 	// .page__hero
 	&__hero {
@@ -7,31 +6,73 @@
 }
 .hero {
 	overflow: hidden;
-	background: #000;
-	padding-bottom: toRem(800);
-	z-index: -1;
+	background: #1a1a1a;
 	position: relative;
-	// .hero__shadow
-	&__shadow {
-		position: absolute;
-		width: 150vw;
-		height: 100%;
-		bottom: -2%;
-		left: -25%;
-		@media (max-width: $mobile) {
-			bottom: -6%;
-		}
-	}
 	// .hero__container
 	&__container {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		row-gap: toRem(260);
 	}
+	// .hero__top
+	&__top {
+	}
+	// .hero__bottom
+	&__bottom {
+	}
+}
+.top-hero {
+	display: flex;
+	@include adaptiveValue("column-gap", 80, 30, 0, 1280, 768.98);
+
+	@media (max-width: $mobile) {
+		flex-direction: column;
+		row-gap: toRem(20);
+	}
+	// .top-hero__titles
 	&__titles {
-		transform: translate(0px, 700px);
+		color: #fff;
 		display: flex;
 		flex-direction: column;
 		gap: toRem(40);
-		max-width: toRem(860);
+		max-width: min-content;
+		@include adaptiveValue("font-size", 96, 32);
+		font-weight: 700;
+		line-height: 96px; /* 100% */
+		letter-spacing: -1.92px;
+		text-transform: uppercase;
+	}
+	&__decor {
+		@include adaptiveValue("font-size", 160, 80);
+		color: #fff;
+		@media (max-width: $mobile) {
+			align-self: end;
+			@include adaptiveValue("translate", -100, -20, 0, 767.98, 320);
+		}
 	}
 }
+.titles {
+	// .titles__title
+	&__title {
+	}
+}
+.hero-bottom {
+	// .hero-bottom__text
+	&__text {
+		color: #121212;
+		@include adaptiveValue("font-size", 24, 18);
+		line-height: math.div( 32, 24);
+		letter-spacing: 0.36px;
+		flex: 0 1 590px;
+	}
 
-//=========================================================
+	&__decor {
+		font-size: toRem(160);
+		color: #fff;
+		display: inline-block;
+		border-radius: 50%;
+		background: #000;
+	}
+}
