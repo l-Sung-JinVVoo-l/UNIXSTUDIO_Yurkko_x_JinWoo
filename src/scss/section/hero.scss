@@ -87,21 +87,18 @@
   }
   // .hero-bottom__text
   &__text {
-    color: #d0d0d0;
+    color: #121212;
     @include adaptiveValue('font-size', 24, 18);
     line-height: math.div(32, 24);
     letter-spacing: 0.36px;
     max-width: toRem(590);
   }
-  // .hero-bottom__decor
+
   &__decor {
     @include adaptiveValue('font-size', 160, 120);
     color: #fff;
     display: inline-block;
     border-radius: 50%;
     background: #000;
-    @media (max-width: $mobile) {
-      align-self: end;
-    }
   }
 }
