@@ -1,34 +1,23 @@
 //=========================================================
 .footer {
 	display: flex;
-	background-color: #00e2ad46;
+	@media (max-width: $mobile) {
+		flex-direction: column;
+	}
 	// .footer__container
 	&__container {
 		@include adaptiveValue("padding-top", 100, 60);
-		padding: 60px;
+		// padding: 60px;
 		// flex: 1 1 50%;
-		position: relative;
-		&::before {
-			@include adaptiveValue("font-size", 130, 100);
-			position: absolute;
-			z-index: 2;
-			right: 0%;
-			top: 50%;
-			transform: translate(50%, -50%);
-			border: 2px solid #000;
-			border-radius: 50%;
-			background-color: #fff;
-			outline: 13px solid white;
-			@media (max-width: $mobileSmall) {
-				outline: 10px solid white;
-			}
-		}
 	}
 	// .footer__social
 	&__social {
+		@include adaptiveValue("margin-bottom", 90, 40);
+		max-width: toRem(461);
 	}
 	// .footer__team
 	&__team {
+		@include adaptiveValue("margin-bottom", 130, 50);
 	}
 	// .footer__contacts
 	&__contacts {
@@ -41,6 +30,29 @@
 		// background-color: #1b1818;
 		padding-bottom: 50%;
 		flex: 0 1 50%;
+		position: relative;
+		@media (max-width: $mobile) {
+			padding-bottom: 150%;
+		}
+		&::before {
+			@include adaptiveValue("font-size", 130, 100);
+			position: absolute;
+			z-index: 2;
+			left: 0%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			border: 2px solid #000;
+			border-radius: 50%;
+			background-color: #fff;
+			outline: 13px solid white;
+			@media (max-width: $mobile) {
+				left: 50%;
+				top: 0%;
+			}
+			@media (max-width: $mobileSmall) {
+				outline: 10px solid white;
+			}
+		}
 	}
 }
 
@@ -70,55 +82,102 @@
 	}
 }
 .team-footer {
+	display: flex;
+	flex-direction: column;
 	// .team-footer__subtitle
 	&__subtitle {
 		color: $mainColorGray;
 		font-size: 20px;
 		line-height: 30px;
+		@include adaptiveValue("margin-bottom", 14, 8);
 	}
 	// .team-footer__title
 	&__title {
 		color: var(--neutral-100, #121212);
 		/* Heading/H7 Bold */
 		font-family: Panchang;
-		font-size: 32px;
+		@include adaptiveValue("font-size", 32, 24);
 		font-style: normal;
 		font-weight: 700;
-		line-height: 36px; /* 112.5% */
+		line-height: math.div(36, 32);
 		letter-spacing: -0.32px;
 		text-transform: uppercase;
 	}
 }
 .contacts-footer {
+	flex: 1 1 auto;
 	// .contacts-footer__subtitle
 	&__subtitle {
-		color: var(--neutral-80, #414141);
-		/* Body/Body M */
-		font-family: Hubot-Sans;
-		font-size: 20px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 30px; /* 150% */
+		color: #414141;
+		@include adaptiveValue("font-size", 20, 16);
+		line-height: math.div(30, 20);
+		@include adaptiveValue("margin-bottom", 14, 8);
 	}
 	// .contacts-footer__mail
 	&__mail {
-		color: var(--neutral-100, #121212);
-		font-size: 44px;
-		font-style: normal;
+		color: #121212;
+		@include adaptiveValue("font-size", 44, 24);
 		font-weight: 400;
 		line-height: 56px; /* 127.273% */
-		letter-spacing: -0.44px;
+		letter-spacing: -0.94px;
+		@include adaptiveValue("margin-bottom", 64, 34);
+	}
+	&__button {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #000;
+		border-radius: 170px;
+		padding: toRem(24) toRem(80);
+		@media (max-width: $mobile) {
+			padding: toRem(24) 0;
+			width: 100%;
+		}
+		@include adaptiveValue("margin-bottom", 64, 60);
+		span {
+			color: #fff;
+			position: relative;
+			padding-right: toRem(40);
+			&::before {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				font-size: toRem(18);
+			}
+		}
 	}
 }
 
 .copyrate-footer {
 	display: flex;
-	gap: toRem(64);
+	justify-content: space-between;
+	// column-gap: toRem(64);
+	row-gap: toRem(28);
+
+	margin-bottom: toRem(42);
+	@media (max-width: $mobile) {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: toRem(100);
+	}
 	// .copyrate-footer__btn
 	&__btn {
+		transform: rotate(-45deg);
+		font-size: toRem(16);
+		@media (max-width: $mobile) {
+			font-size: toRem(26.5);
+		}
 	}
 	// .copyrate-footer__text
 	&__text {
+		@include adaptiveValue("font-size", 18, 14);
+		line-height: 24px;
+		line-height: math.div(24, 18);
+		letter-spacing: 0.36px;
+		@media (max-width: $mobile) {
+			letter-spacing: 0.28px;
+		}
 	}
 }
 
