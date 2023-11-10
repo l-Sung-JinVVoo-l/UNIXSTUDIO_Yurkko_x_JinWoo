@@ -31,6 +31,9 @@
 		padding-bottom: 50%;
 		flex: 0 1 50%;
 		position: relative;
+		img{
+			height: 101%;
+		}
 		@media (max-width: $mobile) {
 			padding-bottom: 150%;
 		}
