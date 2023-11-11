@@ -13,7 +13,7 @@
   // .page__find
   &__featured {
     @include adaptiveValue('padding-top', 120, 20);
-    @include adaptiveValue('padding-bottom', 350, 150);
+    // @include adaptiveValue('padding-bottom', 350, 150);
   }
   // .page__behold
   &__behold {
@@ -28,11 +28,11 @@
   // .page__ceo
   &__ceo {
     // @include adaptiveValue('padding-top', 80, 40);
-    @include adaptiveValue('padding-bottom', 80, 40);
+    @include adaptiveValue('padding-bottom', 350, 150);
   }
   // .page__marque
   &__marque {
-    @include adaptiveValue('padding-top', 80, 40);
+    // @include adaptiveValue('padding-top', 80, 40);
     @include adaptiveValue('padding-bottom', 80, 40);
   }
   // .page__project
