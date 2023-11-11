@@ -1,13 +1,6 @@
 .page {
 	// .page__find
 	&__find {
-		opacity: 0;
-		transform: translate(-400px, 0px);
-		transition: all 0.8s ease 0.3s;
-		&._watcher-view {
-			opacity: 1;
-			transform: translate(0px, 0px);
-		}
 		position: relative;
 		&::before {
 			content: "";
@@ -61,12 +54,18 @@
 	&__titles {
 		font-family: Panchang;
 		@include adaptiveValue("font-size", 64, 32);
-		font-style: normal;
 		font-weight: 700;
 		line-height: math.div(68, 64);
 		text-transform: uppercase;
 		margin-bottom: toRem(48);
-		
+		//=============================
+		opacity: 0;
+		transform: translate(-200px, 0px);
+		transition: all 0.8s ease 0.3s;
+		&._watcher-view {
+			opacity: 1;
+			transform: translate(0px, 0px);
+		}
 	}
 
 	// .top-find__texts
