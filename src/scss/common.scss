@@ -2,7 +2,7 @@
 .page {
   // .page__hero
   &__hero {
-    @include adaptiveValue('padding-top', 100, 100);
+    @include adaptiveValue('padding-top', 72, 72);
     @include adaptiveValue('padding-bottom', 80, 20);
   }
   // .page__find
