@@ -2,29 +2,15 @@
   // .page__find
   &__find {
     position: relative;
-    &::before {
-      content: '';
-      background: url('@img/find/decor.svg') no-repeat;
-      background-size: contain;
-      background-position: center top;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
+    background: url('@img/find/decor.svg') no-repeat;
+    background-size: contain;
+    background-position: center top;
+    width: 100%;
     @media (max-width: $pc) {
-      &::before {
-        @include adaptiveValue('height', 350, 150);
-        top: 50%;
-        transform: translateY(-40%);
-      }
+      background-position: center;
     }
     @media (max-width: $tablet) {
-      &::before {
-        transform: translateY(-15%);
-      }
+      background-position: center;
     }
   }
 }
@@ -42,19 +28,21 @@
   // .find__bottom
   &__bottom {
   }
+  &-bottom__border {
+    display: block;
+  }
   .bottom-border {
     height: 2px;
     @include adaptiveValue('bottom', -80, -20);
-    background-color: #d0d0d0;
+    background-color: $borderBottomBg;
   }
 }
 .top-find {
   @include adaptiveValue('width', 880, 300);
   // .top-find__titles
   &__titles {
-    font-family: Panchang;
+    font-family: Panchang-Bold;
     @include adaptiveValue('font-size', 64, 32);
-    font-style: normal;
     font-weight: 700;
     line-height: math.div(68, 64);
     text-transform: uppercase;
@@ -62,9 +50,10 @@
   }
   // .top-find__texts
   &__texts {
-    font-family: Panchang;
-    @include adaptiveValue('font-size', 32, 16);
+    font-family: Panchang-Semibold;
     font-weight: 600;
+    @include adaptiveValue('font-size', 32, 16);
+    text-transform: uppercase;
   }
 }
 .find-bottom {
@@ -80,6 +69,8 @@
   }
   // .find-bottom__link
   &__link {
+    position: relative;
+    z-index: 2;
     @include adaptiveValue('font-size', 24, 16);
     font-weight: 500;
     border-bottom: 2.5px solid #2a2a2a;
