@@ -59,6 +59,14 @@
 		font-family: Panchang-Semibold;
 		@include adaptiveValue("font-size", 32, 16);
 		font-weight: 600;
+		//=============================
+		opacity: 0;
+		transform: translate(-200px, 0px);
+		transition: all 0.8s ease 0.3s;
+		&._watcher-view {
+			opacity: 1;
+			transform: translate(0px, 0px);
+		}
 	}
 }
 .find-bottom {
@@ -84,28 +92,28 @@
 		flex-direction: column;
 		align-items: start;
 	}
-  font-family: Hubot-Sans-Regular;
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: toRem(20);
-  // .find-bottom__text
-  &__text {
-    @include adaptiveValue('font-size', 24, 16);
-    max-width: toRem(870);
-  }
-  // .find-bottom__link
-  &__link {
-    position: relative;
-    z-index: 2;
-    @include adaptiveValue('font-size', 24, 16);
-    font-weight: 500;
-    border-bottom: 2.5px solid #2a2a2a;
-    cursor: pointer;
-    flex: 0 0 auto;
-  }
-  @media (max-width: $mobileSmall) {
-    flex-direction: column;
-    align-items: start;
-  }
+	font-family: Hubot-Sans-Regular;
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+	gap: toRem(20);
+	// .find-bottom__text
+	&__text {
+		@include adaptiveValue("font-size", 24, 16);
+		max-width: toRem(870);
+	}
+	// .find-bottom__link
+	&__link {
+		position: relative;
+		z-index: 2;
+		@include adaptiveValue("font-size", 24, 16);
+		font-weight: 500;
+		border-bottom: 2.5px solid #2a2a2a;
+		cursor: pointer;
+		flex: 0 0 auto;
+	}
+	@media (max-width: $mobileSmall) {
+		flex-direction: column;
+		align-items: start;
+	}
 }
