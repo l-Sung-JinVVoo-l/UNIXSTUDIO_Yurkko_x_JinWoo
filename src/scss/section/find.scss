@@ -2,29 +2,12 @@
 	// .page__find
 	&__find {
 		position: relative;
-		&::before {
-			content: "";
-			background: url("@img/find/decor.svg") no-repeat;
-			background-size: contain;
-			background-position: center top;
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			width: 100%;
-			height: 100%;
-			z-index: -1;
-		}
+		background: url("@img/find/decor.svg") no-repeat;
+		background-size: contain;
+		background-position: center top;
+		width: 100%;
 		@media (max-width: $pc) {
-			&::before {
-				@include adaptiveValue("height", 350, 150);
-				top: 50%;
-				transform: translateY(-40%);
-			}
-		}
-		@media (max-width: $tablet) {
-			&::before {
-				transform: translateY(-15%);
-			}
+			background-position: center;
 		}
 	}
 }
@@ -42,10 +25,13 @@
 	// .find__bottom
 	&__bottom {
 	}
+	&-bottom__border {
+		display: block;
+	}
 	.bottom-border {
 		height: 2px;
 		@include adaptiveValue("bottom", -80, -20);
-		background-color: #d0d0d0;
+		background-color: $borderBottomBg;
 	}
 }
 .top-find {
@@ -54,6 +40,7 @@
 	&__titles {
 		font-family: Panchang;
 		@include adaptiveValue("font-size", 64, 32);
+		font-style: normal;
 		font-weight: 700;
 		line-height: math.div(68, 64);
 		text-transform: uppercase;
@@ -67,10 +54,9 @@
 			transform: translate(0px, 0px);
 		}
 	}
-
 	// .top-find__texts
 	&__texts {
-		font-family: Panchang;
+		font-family: Panchang-Semibold;
 		@include adaptiveValue("font-size", 32, 16);
 		font-weight: 600;
 	}
@@ -98,4 +84,28 @@
 		flex-direction: column;
 		align-items: start;
 	}
+  font-family: Hubot-Sans-Regular;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: toRem(20);
+  // .find-bottom__text
+  &__text {
+    @include adaptiveValue('font-size', 24, 16);
+    max-width: toRem(870);
+  }
+  // .find-bottom__link
+  &__link {
+    position: relative;
+    z-index: 2;
+    @include adaptiveValue('font-size', 24, 16);
+    font-weight: 500;
+    border-bottom: 2.5px solid #2a2a2a;
+    cursor: pointer;
+    flex: 0 0 auto;
+  }
+  @media (max-width: $mobileSmall) {
+    flex-direction: column;
+    align-items: start;
+  }
 }

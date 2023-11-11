@@ -164,16 +164,3 @@
     }
   }
 }
-
-.bottom-border {
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  bottom: 0;
-  background-color: #fff;
-  opacity: 0.2;
-  @media (max-width: $mobile) {
-    padding: 0;
-    display: none;
-  }
-}
