@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Autoplay, Navigation, Scrollbar } from 'swiper/modules';
+import { Autoplay, Scrollbar } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -31,7 +31,7 @@ function initSliders() {
   if (document.querySelector('.swiper')) {
     // Вказуємо склас потрібного слайдера
     // Створюємо слайдер
-    new Swiper('.witness__slider', {
+    const slider = new Swiper('.witness__slider', {
       // Вказуємо склас потрібного слайдера
       // Підключаємо модулі слайдера
       // для конкретного випадку
@@ -39,7 +39,7 @@ function initSliders() {
       // observer: true,
       // observeParents: true,
       slidesPerView: 2.53,
-      spaceBetween: 40,
+      spaceBetween: 30,
       // autoHeight: true,
       speed: 1200,
 
@@ -50,7 +50,7 @@ function initSliders() {
 
       loop: true,
       autoplay: {
-        delay: 1000,
+        delay: 1500,
         disableOnInteraction: false,
       },
 
@@ -66,7 +66,6 @@ function initSliders() {
 			*/
 
       // Скроллбар
-
       scrollbar: {
         el: '.swiper-scrollbar',
         draggable: true,
@@ -90,7 +89,7 @@ function initSliders() {
         },
         992: {
           slidesPerView: 2.53,
-          spaceBetween: 20,
+          // spaceBetween: 20,
         },
       },
 
@@ -133,5 +132,5 @@ window.addEventListener('load', function (e) {
   // Запуск ініціалізації слайдерів
   initSliders();
   // Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)
-  //initSlidersScroll();
+  // initSlidersScroll();
 });

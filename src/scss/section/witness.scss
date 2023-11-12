@@ -25,13 +25,13 @@
   color: #fff;
   // .witness__content
   &__content {
-    @include adaptiveValue('margin-bottom', 80, 37);
   }
   // .witness__slider
   &__slider {
   }
   // .witness__wrapper
   &__wrapper {
+    @include adaptiveValue('margin-top', 80, 40);
     @include adaptiveValue('margin-bottom', 80, 38);
   }
   // .witness__slide
@@ -47,6 +47,28 @@
     @include adaptiveValue('font-size', 64, 32);
     @include adaptiveValue('gap', 40, 24);
   }
+  .titles {
+    // .titles__title
+    &__title {
+      opacity: 0;
+      transform: translate(-200px, 0px);
+      transition: all 0.8s ease 0.3s;
+      &._watcher-view {
+        opacity: 1;
+        transform: translate(0px, 0px);
+      }
+    }
+    // .titles__text
+    &__text {
+      opacity: 0;
+      transform: translate(-200px, 0px);
+      transition: all 0.8s ease 0.3s;
+      &._watcher-view {
+        opacity: 1;
+        transform: translate(0px, 0px);
+      }
+    }
+  }
 }
 
 .swiper {
@@ -54,6 +76,12 @@
 .swiper-wrapper {
 }
 .swiper-slide {
+  @media (any-hover: hover) {
+    transition: all 0.5s;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
   &__img {
     width: 100%;
     margin-bottom: toRem(24);
@@ -70,11 +98,18 @@
       }
       // .titles__text
       &__text {
+        position: relative;
         font-family: Hubot-Sans-Regular;
         font-weight: 400;
         color: #a0a0a0;
         text-transform: none;
         @include adaptiveValue('font-size', 24, 16);
+        @media (any-hover: hover) {
+          transition: all 0.3s;
+          &:hover {
+            color: #fff;
+          }
+        }
       }
     }
   }

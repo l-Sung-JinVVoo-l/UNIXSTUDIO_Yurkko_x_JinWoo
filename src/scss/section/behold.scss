@@ -25,6 +25,13 @@
     @include adaptiveValue('font-size', 64, 32);
     @include adaptiveValue('margin-bottom', 64, 35);
     color: $mainColor;
+    opacity: 0;
+    transform: translate(-200px, 0px);
+    transition: all 0.8s;
+    &._watcher-view {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
   }
   // .content-behold__image-ibg
   &__image-ibg {
@@ -48,6 +55,13 @@
   justify-content: space-between;
   align-items: end;
   color: #fff;
+  opacity: 0;
+  transform: translate(0px, 50px);
+  transition: all 0.8s;
+  &._watcher-view {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
   // .behold-bottom__body
   &__body {
     display: flex;
