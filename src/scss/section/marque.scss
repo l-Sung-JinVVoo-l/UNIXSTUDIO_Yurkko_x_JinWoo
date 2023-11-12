@@ -1,6 +1,15 @@
 .page {
   // .page__marque
   &__marque {
+    position: relative;
+    z-index: 2;
+    transform: translateY(toRem(-200));
+    @media (max-width: $tablet) {
+      transform: translateY(toRem(-100));
+    }
+    @media (max-width: $mobile) {
+      transform: translateY(toRem(-50));
+    }
   }
 }
 .marque {

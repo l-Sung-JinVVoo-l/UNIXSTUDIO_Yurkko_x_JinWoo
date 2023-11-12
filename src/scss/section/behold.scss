@@ -1,0 +1,96 @@
+.page {
+  // .page__behold
+  &__behold {
+    position: relative;
+    z-index: 2;
+    background-color: #1a1a1a;
+    &::before {
+      content: '';
+      position: absolute;
+      top: toRem(-1);
+      width: 100%;
+      height: 100%;
+      background: url('@img/behold/graphic-top.jpg') no-repeat;
+      background-size: cover;
+      background-position: center top;
+      z-index: -1;
+    }
+  }
+}
+
+.content-behold {
+  // .content-behold__titles
+  &__titles {
+    font-family: Panchang-Bold;
+    @include adaptiveValue('font-size', 64, 32);
+    @include adaptiveValue('margin-bottom', 64, 35);
+    color: $mainColor;
+  }
+  // .content-behold__image-ibg
+  &__image-ibg {
+    padding-bottom: 55%;
+    border-radius: toRem(20);
+    overflow: hidden;
+    @include adaptiveValue('margin-bottom', 65, 36);
+    @media (max-width: $mobileSmall) {
+      padding-bottom: 116%;
+    }
+  }
+  &__img {
+  }
+  // .content-behold__bottom
+  &__bottom {
+  }
+}
+
+.behold-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  color: #fff;
+  // .behold-bottom__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(10);
+  }
+  // .behold-bottom__btn
+  &__btn {
+    font-family: Hubot-Sans-SemiBold;
+    @include adaptiveValue('font-size', 24, 16);
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      height: toRem(1);
+      background-color: #fff;
+    }
+    @media (max-width: $mobileSmall) {
+      &::before {
+        bottom: -5px;
+      }
+    }
+  }
+  @media (max-width: $mobileSmall) {
+    flex-direction: column;
+    align-items: start;
+    row-gap: toRem(20);
+  }
+  .titles {
+    // .titles__title
+    &__title {
+      font-family: Panchang-Bold;
+      @include adaptiveValue('font-size', 32, 18);
+    }
+    // .titles__text
+    &__text {
+      font-family: Hubot-Sans-Regular;
+      font-weight: 400;
+      color: #a0a0a0;
+      text-transform: none;
+      @include adaptiveValue('font-size', 28, 16);
+    }
+  }
+}

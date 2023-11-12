@@ -10,30 +10,22 @@
     @include adaptiveValue('padding-top', 80, 40);
     @include adaptiveValue('padding-bottom', 80, 40);
   }
-  // .page__find
-  &__featured {
-    @include adaptiveValue('padding-top', 120, 20);
-    // @include adaptiveValue('padding-bottom', 350, 150);
-  }
   // .page__behold
   &__behold {
-    // @include adaptiveValue('padding-top', 120, 20);
-    @include adaptiveValue('padding-bottom', 188, 60);
+    @include adaptiveValue('padding-top', 120, 60);
+    @include adaptiveValue('padding-bottom', 180, 60);
   }
   // .page__witness
   &__witness {
-    // @include adaptiveValue('padding-top', 80, 40);
-    @include adaptiveValue('padding-bottom', 150, 72);
+    @include adaptiveValue('padding-bottom', 150, 60);
   }
   // .page__ceo
   &__ceo {
-    // @include adaptiveValue('padding-top', 80, 40);
-    @include adaptiveValue('padding-bottom', 380, 40);
+    @include adaptiveValue('padding-bottom', 380, 120);
   }
   // .page__marque
   &__marque {
-    @include adaptiveValue('padding-top', 80, 40);
-    @include adaptiveValue('padding-bottom', 80, 40);
+    @include adaptiveValue('padding-bottom', 100, 60);
   }
   // .page__project
   &__project {
