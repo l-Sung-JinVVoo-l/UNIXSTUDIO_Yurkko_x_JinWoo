@@ -5,7 +5,7 @@
   &__ceo {
     color: #fff;
     position: relative;
-    top: 0;
+    top: toRem(-2);
     z-index: 2;
     background-color: #1a1a1a;
     &::before,
@@ -41,6 +41,13 @@
   &__titles {
     text-align: center;
     @include adaptiveValue('margin-bottom', 80, 40);
+    opacity: 0;
+    transform: translate(-200px, 0px);
+    transition: all 0.5s;
+    &._watcher-view {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
   }
   // .ceo__content
   &__content {
@@ -84,9 +91,23 @@
       @include adaptiveValue('font-size', 60, 18);
       transform: translate(-200%, 0px);
     }
+    opacity: 0;
+    transform: translate(0px, 50px);
+    transition: all 0.5s;
+    &._watcher-view {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
   }
   // .content-ceo__footnote
   &__footnote {
+    opacity: 0;
+    transform: translate(0px, 50px);
+    transition: all 0.5s;
+    &._watcher-view {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
   }
 }
 .footnote-ceo {
@@ -141,7 +162,6 @@
     @include adaptiveValue('gap', 48, 32);
   }
   &__btn {
-    font-size: toRem(36);
     @include adaptiveValue('font-size', 36, 22);
     // .footnote-ceo__btn--bot
     &--bot {

@@ -77,10 +77,18 @@
       content: '';
       position: absolute;
       width: 100%;
-      bottom: 0;
+      bottom: toRem(-4);
       height: toRem(1);
       background-color: #fff;
+      transition: all 0.3s;
     }
+    @media (any-hover: hover) {
+      &:hover::before {
+        opacity: 0;
+        bottom: toRem(-10);
+      }
+    }
+
     @media (max-width: $mobileSmall) {
       &::before {
         bottom: -5px;
