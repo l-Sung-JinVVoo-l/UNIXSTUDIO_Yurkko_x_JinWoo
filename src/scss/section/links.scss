@@ -1,63 +1,70 @@
 .links {
-	// .links__container
-	&__container {
-		// Стилі для контейнера, якщо потрібно
-	}
-	// .links__menu
-	&__menu {
-		// Стилі для меню, якщо потрібно
-	}
-	// .links__content
-	&__content {
-		// Стилі для контенту, якщо потрібно
-	}
+  // .links__container
+  &__container {
+    // Стилі для контейнера, якщо потрібно
+  }
+  // .links__menu
+  &__menu {
+    // Стилі для меню, якщо потрібно
+  }
+  // .links__content
+  &__content {
+    // Стилі для контенту, якщо потрібно
+  }
 }
 .links-menu {
-	@include adaptiveValue("padding-bottom", 120, 60);
-	// .links-menu__body
-	&__body {
-		// Стилі для тіла меню, якщо потрібно
-	}
-	// .links-menu__list
-	&__list {
-		font-family: Panchang-Bold;
-		@include adaptiveValue("font-size", 48, 20);
-		line-height: math.div(56, 48);
-		letter-spacing: toRem(-0.48);
-		text-transform: uppercase;
-	}
+  @include adaptiveValue('padding-bottom', 120, 60);
+  // .links-menu__body
+  &__body {
+    // Стилі для тіла меню, якщо потрібно
+  }
+  // .links-menu__list
+  &__list {
+    font-family: Panchang-Bold;
+    @include adaptiveValue('font-size', 48, 20);
+    line-height: math.div(56, 48);
+    letter-spacing: toRem(-0.48);
+    text-transform: uppercase;
+  }
 }
 .links-list {
-	cursor: pointer;
-	// .links-list__item
-	&__item {
-		position: relative;
-		width: 100%;
-		@include adaptiveValue("padding-top", 40, 28);
-		@include adaptiveValue("padding-bottom", 40, 28);
-		//=============================
-		opacity: 0;
-		transform: translate(0px, -100px);
-		transition: all 0.8s ease 0.3s;
-		&._watcher-view {
-			opacity: 1;
-			transform: translate(0px, 0px);
-		}
-	}
-	// .links-list__link
-	&__link {
-		display: inline-block;
-		@include adaptiveValue("max-width", 950, 255);
-		&::before {
-			position: absolute;
-			right: 0;
-			top: 50%;
-			transform: translateY(-50%);
-			@include adaptiveValue("font-size", 37, 15);
-			color: $borderBottomBg;
-		}
-	}
-	&__border {
-		display: block;
-	}
+  cursor: pointer;
+  // .links-list__item
+  &__item {
+    position: relative;
+    width: 100%;
+    @include adaptiveValue('padding-top', 40, 28);
+    @include adaptiveValue('padding-bottom', 40, 28);
+    //=============================
+    opacity: 0;
+    transform: translate(0px, 50px);
+    transition: all 0.5s;
+    &._watcher-view {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.05);
+        transition: 0.3s;
+        color: $hoverColor;
+      }
+    }
+  }
+  // .links-list__link
+  &__link {
+    display: inline-block;
+    @include adaptiveValue('max-width', 950, 255);
+    &::before {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      @include adaptiveValue('font-size', 37, 15);
+      color: $borderBottomBg;
+    }
+  }
+  &__border {
+    display: block;
+  }
 }

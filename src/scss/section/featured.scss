@@ -7,10 +7,6 @@
     background-position: center top;
     background-size: cover;
     color: #fff;
-    @media (max-width: $mobileSmall) {
-      background: url('@img/behold/graphic-small.jpg') no-repeat;
-      background-size: cover;
-    }
   }
   // .page__behold
   &__behold {
@@ -23,10 +19,6 @@
     background: url('@img/featured/graphic-btm.png') no-repeat;
     background-size: cover;
     background-position: center bottom;
-    @media (max-width: $mobileSmall) {
-      background: url('@img/featured/graphic-bt2m.png') no-repeat;
-      background-size: cover;
-    }
   }
 }
 .featured {

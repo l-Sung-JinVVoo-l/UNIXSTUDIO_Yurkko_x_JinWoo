@@ -20,12 +20,13 @@
   &__top {
     display: flex;
     @include adaptiveValue('gap', 180, 80);
+    animation: moveRight 5s linear infinite running;
   }
   // .marque-running__bottom
   &__bottom {
     display: flex;
-    transform: translateX(-20%);
     @include adaptiveValue('gap', 180, 80);
+    animation: moveLeft 5s linear infinite running;
   }
   // .marque-running__text
   &__text {
@@ -72,5 +73,23 @@
       height: toRem(2);
       background-color: #121212;
     }
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

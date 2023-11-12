@@ -2,7 +2,7 @@
 .page {
   // .page__hero
   &__hero {
-    @include adaptiveValue('padding-top', 72, 72);
+    @include adaptiveValue('padding-top', 100, 72);
     @include adaptiveValue('padding-bottom', 80, 20);
   }
   // .page__find
@@ -28,11 +28,11 @@
   // .page__ceo
   &__ceo {
     // @include adaptiveValue('padding-top', 80, 40);
-    @include adaptiveValue('padding-bottom', 350, 150);
+    @include adaptiveValue('padding-bottom', 380, 40);
   }
   // .page__marque
   &__marque {
-    // @include adaptiveValue('padding-top', 80, 40);
+    @include adaptiveValue('padding-top', 80, 40);
     @include adaptiveValue('padding-bottom', 80, 40);
   }
   // .page__project
@@ -115,7 +115,7 @@
 .bottom-border {
   position: absolute;
   width: 100%;
-  height: 1px;
+  height: 2px;
   bottom: 0;
   background-color: #fff;
   opacity: 0.2;

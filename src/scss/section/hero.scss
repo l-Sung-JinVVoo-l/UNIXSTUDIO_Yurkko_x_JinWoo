@@ -32,7 +32,6 @@
   &__bottom {
   }
   .bottom-border {
-    height: 1px;
     @include adaptiveValue('bottom', -80, -20);
     background-color: $borderBottomBg;
   }
@@ -86,7 +85,7 @@
     }
     transition: all 1.1s ease 50ms;
     &._watcher-view {
-      translate: 0px 43px;
+      translate: 0px 1px;
       animation: rotate-infinity-star 30s linear infinite;
     }
   }

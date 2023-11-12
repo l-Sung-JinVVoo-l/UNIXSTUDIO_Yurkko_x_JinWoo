@@ -1,119 +1,118 @@
 .page {
-	// .page__find
-	&__find {
-		position: relative;
-		background: url("@img/find/decor.svg") no-repeat;
-		background-size: contain;
-		background-position: center top;
-		width: 100%;
-		@media (max-width: $pc) {
-			background-position: center;
-		}
-	}
+  // .page__find
+  &__find {
+    position: relative;
+    background: url('@img/find/decor.svg') no-repeat;
+    background-size: contain;
+    background-position: center top;
+    width: 100%;
+    @media (max-width: $pc) {
+      background-position: center;
+    }
+  }
 }
 .find {
-	// .find__content
-	&__content {
-		display: flex;
-		flex-direction: column;
-		@include adaptiveValue("row-gap", 260, 150);
-		position: relative;
-	}
-	// .find__top
-	&__top {
-	}
-	// .find__bottom
-	&__bottom {
-	}
-	&-bottom__border {
-		display: block;
-	}
-	.bottom-border {
-		height: 2px;
-		@include adaptiveValue("bottom", -80, -20);
-		background-color: $borderBottomBg;
-	}
+  // .find__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue('row-gap', 260, 150);
+    position: relative;
+  }
+  // .find__top
+  &__top {
+  }
+  // .find__bottom
+  &__bottom {
+  }
+  &-bottom__border {
+    display: block;
+  }
+  .bottom-border {
+    @include adaptiveValue('bottom', -80, -20);
+    background-color: $borderBottomBg;
+  }
 }
 .top-find {
-	@include adaptiveValue("width", 880, 300);
-	// .top-find__titles
-	&__titles {
-		font-family: Panchang;
-		@include adaptiveValue("font-size", 64, 32);
-		font-style: normal;
-		font-weight: 700;
-		line-height: math.div(68, 64);
-		text-transform: uppercase;
-		margin-bottom: toRem(48);
-		//=============================
-		opacity: 0;
-		transform: translate(-200px, 0px);
-		transition: all 0.8s ease 0.3s;
-		&._watcher-view {
-			opacity: 1;
-			transform: translate(0px, 0px);
-		}
-	}
-	// .top-find__texts
-	&__texts {
-		font-family: Panchang-Semibold;
-		@include adaptiveValue("font-size", 32, 16);
-		font-weight: 600;
-		//=============================
-		opacity: 0;
-		transform: translate(-200px, 0px);
-		transition: all 0.8s ease 0.3s;
-		&._watcher-view {
-			opacity: 1;
-			transform: translate(0px, 0px);
-		}
-	}
+  @include adaptiveValue('width', 880, 300);
+  // .top-find__titles
+  &__titles {
+    font-family: Panchang;
+    @include adaptiveValue('font-size', 64, 32);
+    font-style: normal;
+    font-weight: 700;
+    line-height: math.div(68, 64);
+    text-transform: uppercase;
+    margin-bottom: toRem(48);
+    //=============================
+    opacity: 0;
+    transform: translate(-200px, 0px);
+    transition: all 0.8s ease 0.3s;
+    &._watcher-view {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
+  }
+  // .top-find__texts
+  &__texts {
+    font-family: Panchang-Semibold;
+    @include adaptiveValue('font-size', 32, 16);
+    font-weight: 600;
+    //=============================
+    opacity: 0;
+    transform: translate(-200px, 0px);
+    transition: all 0.8s ease 0.3s;
+    &._watcher-view {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
+  }
 }
 .find-bottom {
-	font-family: Hubot-Sans-Regular;
-	display: flex;
-	justify-content: space-between;
-	align-items: end;
-	gap: toRem(20);
-	// .find-bottom__text
-	&__text {
-		@include adaptiveValue("font-size", 24, 16);
-		max-width: toRem(870);
-	}
-	// .find-bottom__link
-	&__link {
-		@include adaptiveValue("font-size", 24, 16);
-		font-weight: 500;
-		border-bottom: 2.5px solid #2a2a2a;
-		cursor: pointer;
-		flex: 0 0 auto;
-	}
-	@media (max-width: $mobileSmall) {
-		flex-direction: column;
-		align-items: start;
-	}
-	font-family: Hubot-Sans-Regular;
-	display: flex;
-	justify-content: space-between;
-	align-items: end;
-	gap: toRem(20);
-	// .find-bottom__text
-	&__text {
-		@include adaptiveValue("font-size", 24, 16);
-		max-width: toRem(870);
-	}
-	// .find-bottom__link
-	&__link {
-		position: relative;
-		z-index: 2;
-		@include adaptiveValue("font-size", 24, 16);
-		font-weight: 500;
-		border-bottom: 2.5px solid #2a2a2a;
-		cursor: pointer;
-		flex: 0 0 auto;
-	}
-	@media (max-width: $mobileSmall) {
-		flex-direction: column;
-		align-items: start;
-	}
+  font-family: Hubot-Sans-Regular;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: toRem(20);
+  // .find-bottom__text
+  &__text {
+    @include adaptiveValue('font-size', 24, 16);
+    max-width: toRem(870);
+  }
+  // .find-bottom__link
+  &__link {
+    @include adaptiveValue('font-size', 24, 16);
+    font-weight: 500;
+    border-bottom: 2.5px solid #2a2a2a;
+    cursor: pointer;
+    flex: 0 0 auto;
+  }
+  @media (max-width: $mobileSmall) {
+    flex-direction: column;
+    align-items: start;
+  }
+  font-family: Hubot-Sans-Regular;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: toRem(20);
+  // .find-bottom__text
+  &__text {
+    @include adaptiveValue('font-size', 24, 16);
+    max-width: toRem(870);
+  }
+  // .find-bottom__link
+  &__link {
+    position: relative;
+    z-index: 2;
+    @include adaptiveValue('font-size', 24, 16);
+    font-weight: 500;
+    border-bottom: 2.5px solid #2a2a2a;
+    cursor: pointer;
+    flex: 0 0 auto;
+  }
+  @media (max-width: $mobileSmall) {
+    flex-direction: column;
+    align-items: start;
+  }
 }

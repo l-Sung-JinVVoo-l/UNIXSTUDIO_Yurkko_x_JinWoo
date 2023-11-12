@@ -1,5 +1,9 @@
 //=========================================================
 .header {
+  // position: fixed;
+  // width: 100%;
+  // left: 0;
+  // top: 0;
   background-color: #1a1a1a;
   color: #fff;
   padding-top: 20px;
@@ -112,9 +116,17 @@
     @media (max-width: $mobile) {
       font-size: toRem(25);
     }
+    animation: focus 1.5s;
   }
 }
-
+@keyframes focus {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 //=========================================================
 
 //Burger
