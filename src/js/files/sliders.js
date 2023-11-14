@@ -89,7 +89,7 @@ function initSliders() {
         },
         992: {
           slidesPerView: 2.53,
-          // spaceBetween: 20,
+          spaceBetween: 30,
         },
       },
 

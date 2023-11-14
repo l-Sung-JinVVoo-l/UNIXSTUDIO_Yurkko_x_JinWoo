@@ -19,7 +19,7 @@
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: url('@img/ceo/graphic.png') no-repeat;
+      background: url('@img/ceo/graphic.svg') no-repeat;
       background-size: contain;
       background-position: left bottom;
     }
@@ -148,6 +148,7 @@
     line-height: math.div(28, 24);
     letter-spacing: -0.16px;
     text-transform: uppercase;
+    white-space: nowrap;
   }
   // .footnote-ceo__prod
   &__prod {

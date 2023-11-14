@@ -2,14 +2,14 @@
   // .page__marque
   &__marque {
     position: relative;
-    z-index: 2;
-    transform: translateY(toRem(-200));
-    @media (max-width: $tablet) {
-      transform: translateY(toRem(-100));
-    }
-    @media (max-width: $mobile) {
-      transform: translateY(toRem(-50));
-    }
+    // z-index: 2;
+    // transform: translateY(toRem(-200));
+    // @media (max-width: $tablet) {
+    //   transform: translateY(toRem(-100));
+    // }
+    // @media (max-width: $mobile) {
+    //   transform: translateY(toRem(-50));
+    // }
   }
 }
 .marque {
@@ -58,8 +58,11 @@
     }
   }
 }
+
 .marque-content {
+  position: relative;
   text-align: center;
+  @include adaptiveValue('padding-bottom', 100, 60);
   @include adaptiveValue('padding-top', 68, 40);
   // .marque-content__text
   &__text {
@@ -90,6 +93,9 @@
         bottom: toRem(-10);
       }
     }
+  }
+  &__border {
+    left: 0;
   }
 }
 

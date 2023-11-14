@@ -31,9 +31,11 @@
   // .hero__bottom
   &__bottom {
   }
-  .bottom-border {
+  &__bottom-border {
     @include adaptiveValue('bottom', -80, -20);
-    background-color: $borderBottomBg;
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
   .titles {
     // .titles__title

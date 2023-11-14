@@ -1,3 +1,52 @@
 //=========================================================
+.page {
+  // .page__project
+  &__project {
+  }
+}
+.project {
+  // .project__container
+  &__container {
+  }
+  // .project__top
+  &__top {
+    display: flex;
+    align-items: end;
+    @include adaptiveValue('column-gap', 311, 20);
+    @include adaptiveValue('padding-bottom', 100, 40);
+    @media (max-width: $mobileSmall) {
+      align-items: start;
+      flex-direction: column;
+      gap: toRem(32) toRem(0);
+    }
+  }
+  .titles {
+    // .titles__title
+    &__title {
+      flex: 0 0 auto;
+      @include adaptiveValue('width', 500, 250);
+    }
+    // .titles__link
+    &__link {
+      width: 100%;
+      font-family: Hubot-Sans-Medium;
+      font-weight: 500;
+      position: relative;
+      @include adaptiveValue('font-size', 24, 16);
+      padding-bottom: toRem(10);
+      white-space: nowrap;
+      @media (max-width: $mobileSmall) {
+        width: auto;
+      }
+    }
+    &__border {
+      height: toRem(1);
+      left: 0;
+      opacity: 1;
+      background: $mainColor;
+      display: block;
+    }
+  }
+}
 
 //=========================================================

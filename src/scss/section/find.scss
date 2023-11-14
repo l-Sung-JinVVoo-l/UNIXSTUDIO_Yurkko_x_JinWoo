@@ -25,12 +25,9 @@
   // .find__bottom
   &__bottom {
   }
-  &-bottom__border {
+  &__bottom-border {
     display: block;
-  }
-  .bottom-border {
     @include adaptiveValue('bottom', -80, -20);
-    background-color: $borderBottomBg;
   }
 }
 .top-find {
