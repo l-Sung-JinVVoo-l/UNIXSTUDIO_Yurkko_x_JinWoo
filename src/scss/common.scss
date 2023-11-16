@@ -24,8 +24,8 @@
     @include adaptiveValue('padding-bottom', 380, 120);
   }
   // .page__marque
-  &__marque {
-    // @include adaptiveValue('padding-bottom', 100, 60);
+  &__marque-bottom {
+    @include adaptiveValue('padding-bottom', 363, 150);
   }
   // .page__project
   &__project {
