@@ -23,18 +23,18 @@
   &__ceo {
     @include adaptiveValue('padding-bottom', 380, 120);
   }
-  // .page__marque
+  // .page__marque-bottom
   &__marque-bottom {
-    @include adaptiveValue('padding-bottom', 363, 150);
+    @include adaptiveValue('padding-top', 80, 40);
+    @include adaptiveValue('padding-bottom', 365, 150);
   }
   // .page__project
   &__project {
-    @include adaptiveValue('padding-top', 80, 40);
     @include adaptiveValue('padding-bottom', 80, 40);
   }
   // .page__worthy
   &__worthy {
-    @include adaptiveValue('padding-top', 80, 40);
+    // @include adaptiveValue('padding-top', 80, 40);
     @include adaptiveValue('padding-bottom', 80, 40);
   }
   // .page__clients

@@ -1,5 +1,74 @@
 //=========================================================
+.page {
+  // .page__worthy
+  &__worthy {
+    position: relative;
+    top: toRem(-1);
+  }
+}
 
-
+.worthy {
+  color: #fff;
+  background: #1a1a1a;
+  // .worthy__container
+  &__container {
+  }
+  // .worthy__header
+  &__header {
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue('row-gap', 20, 5);
+  }
+}
+.worthy-header {
+  font-family: Panchang-Bold;
+  @include adaptiveValue('font-size', 96, 44);
+  line-height: math.div(96, 96);
+  // .worthy-header__top
+  &__top {
+  }
+  // .worthy-header__top-title
+  &__top-title {
+  }
+  // .worthy-header__bottom
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 0 toRem(10);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+  // .worthy-header__bottom-text
+  &__bottom-text {
+    white-space: unset;
+    font-family: Hubot;
+    @include adaptiveValue('font-size', 28, 18);
+    line-height: math.div(38, 28);
+    @media (max-width: $tablet) {
+      // display: flex;
+      align-self: flex-start;
+      &:first-child {
+        margin-bottom: toRem(15);
+      }
+    }
+  }
+  // .worthy-header__bottom-title
+  &__bottom-title {
+    display: flex;
+    @media (max-width: $tablet) {
+      order: -1;
+      margin-bottom: toRem(18);
+    }
+  }
+  ._icon-Circle-Button {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    @include adaptiveValue('font-size', 100, 48);
+    @include adaptiveValue('margin-right', 10, 4);
+    @include adaptiveValue('margin-left', 10, 4);
+  }
+}
 
 //=========================================================
