@@ -8,7 +8,7 @@
     &::before {
       content: '';
       position: absolute;
-      top: 0;
+      top: toRem(-30);
       background: url('@img/worthy/graphic-marque-full.png') center top
         no-repeat;
       background-size: cover;
