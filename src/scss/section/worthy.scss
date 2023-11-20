@@ -1,29 +1,80 @@
+// Test
 //=========================================================
 .page {
   // .page__worthy
   &__worthy {
     position: relative;
-    top: toRem(-1);
+    // background: #1a1a1a;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      background: url('@img/worthy/graphic-marque-full.png') center top
+        no-repeat;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      @media (max-width: $mobile) {
+        background: url('@img/worthy/graphic-marque-mob.png') center top
+          no-repeat;
+        background-size: cover;
+      }
+    }
   }
 }
-
 .worthy {
-  color: #fff;
-  background: #1a1a1a;
+  background-color: #1a1a1a;
+  // .worthy__marque-bottom
+  &__marque-bottom {
+  }
   // .worthy__container
   &__container {
+    position: relative;
+    z-index: 2;
   }
   // .worthy__header
   &__header {
+    color: #fff;
+    @include adaptiveValue('padding-top', 363, 150);
     display: flex;
     flex-direction: column;
     @include adaptiveValue('row-gap', 20, 5);
   }
+  // .worthy__top
+  &__top {
+    display: grid;
+    // gap: 2px;
+    grid-template-areas:
+      'item-1 item-2 item-3 item-3'
+      'item-1 item-4 item-5 item-6'
+      'item-1 item-7 item-8 item-9';
+    grid-template-columns: repeat(4, minmax(toRem(150), 1fr));
+
+    // background-color: #383838;
+    border-top: 2px solid #383838;
+    // border-bottom: 2px solid #383838;
+
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, minmax(toRem(150), 1fr));
+      grid-template-areas:
+        'item-2 item-3'
+        'item-4 item-5'
+        'item-6 item-7'
+        'item-8 item-9'
+        'item-1 item-1';
+
+      border-bottom: 0;
+    }
+  }
+}
+
+._icon-stars {
 }
 .worthy-header {
   font-family: Panchang-Bold;
   @include adaptiveValue('font-size', 96, 44);
   line-height: math.div(96, 96);
+  @include adaptiveValue('margin-bottom', 100, 48);
   // .worthy-header__top
   &__top {
   }
@@ -71,4 +122,135 @@
   }
 }
 
+.worthy-top {
+  // .worthy-top__item
+  &__item {
+    color: #fff;
+    background-color: #1a1a1a;
+    border-left: 2px solid #383838;
+    border-bottom: 2px solid #383838;
+    &:first-child {
+      border-left: 0;
+    }
+    @media (max-width: $mobile) {
+      &:nth-child(even) {
+        border-left: 0;
+      }
+      &:first-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+.worthy-item {
+  padding-top: toRem(40);
+  @include adaptiveValue('padding-left', 40, 0);
+  @include adaptiveValue('padding-bottom', 40, 28);
+  @include adaptiveValue('padding-right', 20, 16);
+  &:nth-child(odd) {
+    @include adaptiveValue('padding-left', 40, 17);
+  }
+  // .worthy-item__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 100%;
+  }
+}
+.worthy-content {
+  // .worthy-content__btn
+  &__btn {
+    position: relative;
+    padding-bottom: toRem(4);
+    width: max-content;
+
+    font-family: Hubot-Sans-Regular;
+    font-size: 24px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      height: toRem(1);
+      width: 100%;
+      background: #fff;
+    }
+  }
+  // .worthy-content__text
+  &__text {
+    font-family: Hubot;
+    @include adaptiveValue('font-size', 17, 14);
+    line-height: math.div(24, 18);
+    letter-spacing: 0.36px;
+
+    flex: 1 0 auto;
+    @include adaptiveValue('margin-bottom', 80, 35);
+  }
+  // .worthy-content__number
+  &__number {
+    font-family: Panchang-Bold;
+    @include adaptiveValue('font-size', 64, 24);
+    line-height: math.div(68, 64);
+    letter-spacing: -0.64px;
+    text-transform: uppercase;
+  }
+  // .worthy-content__link
+  &__link {
+  }
+}
+
+.item-1 {
+  grid-area: item-1;
+  @media (max-width: $mobile) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.item-2 {
+  grid-area: item-2;
+}
+
+.item-3 {
+  grid-area: item-3;
+  span {
+    @include adaptiveValue('margin-bottom', 32, 8);
+  }
+}
+
+.item-4 {
+  grid-area: item-4;
+}
+
+.item-5 {
+  grid-area: item-5;
+}
+
+.item-6 {
+  grid-area: item-6;
+}
+
+.item-7 {
+  grid-area: item-7;
+  p {
+    flex: none;
+    margin-bottom: toRem(0);
+  }
+}
+
+.item-8 {
+  grid-area: item-8;
+  @media (max-width: $mobile) {
+    border-bottom: 0;
+  }
+}
+
+.item-9 {
+  grid-area: item-9;
+  @media (max-width: $mobile) {
+    border-bottom: 0;
+  }
+}
 //=========================================================

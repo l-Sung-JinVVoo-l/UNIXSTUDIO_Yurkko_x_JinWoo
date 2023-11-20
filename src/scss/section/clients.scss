@@ -1,5 +1,124 @@
-//=========================================================
+.page {
+  // .page__clients
+  &__clients {
+    color: #fff;
+    background-color: #1a1a1a;
+  }
+}
+.clients {
+  // .clients__container
+  &__container {
+  }
+  // .clients__header
+  &__header {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(toRem(150), 1fr));
+    grid-template-areas: 'cli-texts cli-texts cli-texts cli-decor';
 
+    border-bottom: 2px solid #383838;
+  }
+  // .clients__header-texts
+  &__header-texts {
+    grid-area: cli-texts;
+  }
+  // .clients__header-decor
+  &__header-decor {
+    grid-area: cli-decor;
+  }
+  // .clients__top
+  &__top {
+  }
+}
+.clients-texts {
+  @include adaptiveValue('padding-top', 120, 60);
+  @include adaptiveValue('padding-left', 40, 0);
+  @include adaptiveValue('padding-bottom', 80, 28);
+  @include adaptiveValue('padding-right', 40, 0);
+  // .clients-texts__inner
+  &__inner {
+    display: flex;
+    gap: toRem(20);
+    justify-content: space-between;
+  }
+}
+.сlients-inner {
+  // .сlients-inner__title
+  &__title {
+    font-family: Panchang-Bold;
+    @include adaptiveValue('font-size', 96, 44);
+    letter-spacing: -1.92px;
+    text-transform: uppercase;
+  }
+  // .сlients-inner__text
+  &__text {
+    align-self: flex-end;
+    @include adaptiveValue('font-size', 18, 16);
+    @include adaptiveValue('margin-bottom', 18, 0);
+  }
+}
 
-
-//=========================================================
+.clients-decor {
+  display: flex;
+  @include adaptiveValue('padding-top', 120, 60);
+  border-left: 2px solid #383838;
+  // .clients-decor__link
+  &__link {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    width: 100%;
+    color: #fff;
+    @include adaptiveValue('padding-bottom', 80, 28);
+    &:last-child {
+      border-left: 2px solid #383838;
+      a {
+        rotate: 180deg;
+      }
+    }
+    a {
+      font-size: toRem(24);
+    }
+  }
+}
+._icon-arrow {
+}
+.clients-top {
+  // .clients-top__row
+  &__row {
+  }
+  // .clients-top__text
+  &__text {
+  }
+  // .clients-top__footnote
+  &__footnote {
+  }
+}
+.cli-row {
+  // .cli-row__dec
+  &__dec {
+  }
+}
+._icon-Forgings {
+}
+.head {
+  // .head__text
+  &__text {
+  }
+}
+.footnote-clients {
+  // .footnote-clients__prof
+  &__prof {
+  }
+  // .footnote-clients__image
+  &__image {
+  }
+  // .footnote-clients__tites
+  &__tites {
+  }
+  // .footnote-clients__name
+  &__name {
+  }
+  // .footnote-clients__prod
+  &__prod {
+  }
+}
