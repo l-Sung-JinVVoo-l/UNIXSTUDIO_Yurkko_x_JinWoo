@@ -77,6 +77,14 @@
   @include adaptiveValue('margin-bottom', 100, 48);
   // .worthy-header__top
   &__top {
+    opacity: 0;
+    transform: translate(-100px, 0px);
+    transition: all 0.5s;
+
+    &._watcher-view {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
   }
   // .worthy-header__top-title
   &__top-title {
@@ -89,6 +97,15 @@
     gap: 0 toRem(10);
     @media (max-width: $tablet) {
       flex-direction: column;
+    }
+    opacity: 0;
+    transform: translate(-100px, 0px);
+    transition: all 0.5s;
+
+    &._watcher-view {
+      opacity: 1;
+      transform: translate(0px, 0px);
+      transition-delay: 0.5s;
     }
   }
   // .worthy-header__bottom-text
@@ -119,6 +136,7 @@
     @include adaptiveValue('font-size', 100, 48);
     @include adaptiveValue('margin-right', 10, 4);
     @include adaptiveValue('margin-left', 10, 4);
+    animation: rotate-infinity-star 20s linear infinite;
   }
 }
 
@@ -158,10 +176,47 @@
     justify-content: end;
     height: 100%;
   }
+  // Animation
+  opacity: 0;
+  transform: translate(0px, 100px);
+  transition: all 0.6s ease;
+
+  &._watcher-view {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  &:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  &:nth-child(3) {
+    transition-delay: 0.5s;
+  }
+  &:nth-child(3) {
+    transition-delay: 0.8s;
+  }
+  &:nth-child(4) {
+    transition-delay: 0.2s;
+  }
+  &:nth-child(5) {
+    transition-delay: 0.5s;
+  }
+  &:nth-child(6) {
+    transition-delay: 0.8s;
+  }
+  &:nth-child(7) {
+    transition-delay: 0.2s;
+  }
+  &:nth-child(8) {
+    transition-delay: 0.5s;
+  }
+  &:nth-child(9) {
+    transition-delay: 0.8s;
+  }
 }
 .worthy-content {
   // .worthy-content__btn
   &__btn {
+    cursor: pointer;
     position: relative;
     padding-bottom: toRem(4);
     width: max-content;
@@ -176,6 +231,13 @@
       height: toRem(1);
       width: 100%;
       background: #fff;
+      transition: all 0.4s;
+    }
+    @media (any-hover: hover) {
+      &:hover::before {
+        opacity: 0;
+        bottom: toRem(-10);
+      }
     }
   }
   // .worthy-content__text
@@ -195,9 +257,20 @@
     line-height: math.div(68, 64);
     letter-spacing: -0.64px;
     text-transform: uppercase;
+    display: inline-block;
+    display: flex;
+    span {
+      color: greenyellow;
+    }
   }
   // .worthy-content__link
   &__link {
+    transition: all 0.5s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: greenyellow;
+      }
+    }
   }
 }
 

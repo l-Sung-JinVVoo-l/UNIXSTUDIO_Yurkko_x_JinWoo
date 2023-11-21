@@ -76,6 +76,14 @@
     margin: 0 auto;
     @include adaptiveValue('font-size', 24, 18);
     margin-bottom: toRem(40);
+    opacity: 0;
+    transform: translate(0px, 50px);
+    transition: all 0.5s;
+
+    &._watcher-view {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
   }
   // .marque-content__link
   &__link {
@@ -103,6 +111,7 @@
   &__border {
     left: 0;
   }
+  // Animation
 }
 
 @keyframes moveRight {

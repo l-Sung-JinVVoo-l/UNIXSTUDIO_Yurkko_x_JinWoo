@@ -143,14 +143,6 @@
   }
 }
 
-@keyframes rotate-infinity {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 // Анімація
 
 .hero-bottom__decor._icon-Circle-Button::before {

@@ -28,6 +28,14 @@
       &__title {
         flex: 0 0 auto;
         @include adaptiveValue('width', 500, 250);
+        opacity: 0;
+        transform: translate(-200px, 0);
+        transition: all 0.5s ease;
+
+        &._watcher-view {
+          opacity: 1;
+          transform: translate(0px, 0px);
+        }
       }
 
       // .titles__link
@@ -42,6 +50,15 @@
 
         @media (max-width: $mobileSmall) {
           width: auto;
+        }
+        // Animation
+        opacity: 0;
+        transform: translate(0px, 50px);
+        transition: all 0.7s ease-in-out;
+
+        &._watcher-view {
+          opacity: 1;
+          transform: translate(0px, 0px);
         }
       }
 
@@ -94,6 +111,14 @@
       border-left: 0;
       grid-template-columns: auto;
     }
+    opacity: 0;
+    transform: translate(0px, 50px);
+    transition: all 0.5s ease;
+
+    &._watcher-view {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
   }
 }
 .item {
@@ -121,14 +146,18 @@
   &__link {
     display: block;
     position: relative;
+
     padding-bottom: toRem(12);
-    text-transform: uppercase;
     @include adaptiveValue('margin-bottom', 60, 32);
+
+    text-transform: uppercase;
+    transition: all 0.5s ease;
     &::before {
       position: absolute;
       top: 50%;
       right: 0;
       translate: 0 -50%;
+      transition: all 0.5s ease;
     }
     span {
       position: relative;
@@ -142,7 +171,16 @@
         background: $mainColor;
       }
     }
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.05);
+      }
+      &:hover::before {
+        color: #adc140;
+      }
+    }
   }
+
   // .item-content__text
   &__text {
     font-family: Hubot-Sans-Regular;
@@ -200,42 +238,6 @@
   }
 }
 
-.project-bottom {
-  // .project-bottom__item
-  &__texts {
-    // Position
-    @include adaptiveValue('padding-left', 40, 0);
-    @include adaptiveValue('padding-right', 40, 0);
-    @include adaptiveValue('padding-top', 120, 40);
-    // Decor
-    border-left: $projectBorder;
-    @media (max-width: $mobile) {
-      border-left: 0;
-    }
-  }
-  // .project-bottom__content
-  &__content {
-    // Position
-    @include adaptiveValue('padding-top', 90, 40);
-    // Grid
-    display: grid;
-    grid-template: auto / repeat(2, minmax(toRem(350), 1fr));
-    // Decor
-    border-left: $projectBorder;
-    @media (max-width: $mobile) {
-      grid-template-columns: auto;
-      border-left: 0;
-    }
-  }
-  // .project-bottom__content-item
-  &__content-item {
-  }
-}
-.item {
-  // .item__head
-  &__head {
-  }
-}
 .head {
   // .head__row-top
   &__row-top {
@@ -257,16 +259,52 @@
   &__text {
     @include adaptiveValue('font-size', 44, 16);
     line-height: math.div(56, 44);
+    opacity: 0;
+    transform: translate(-200px, 0);
+    transition: all 0.5s ease-in-out;
+
+    &._watcher-view {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
   }
 }
 
 // Bottom
 
 .project-bottom {
+  // .project-bottom__item
+  &__texts {
+    // Position
+    @include adaptiveValue('padding-left', 40, 0);
+    @include adaptiveValue('padding-right', 40, 0);
+    @include adaptiveValue('padding-top', 120, 40);
+    // Decor
+    border-left: $projectBorder;
+    @media (max-width: $mobile) {
+      border-left: 0;
+    }
+  }
+
   // .project-bottom__content
   &__content {
+    // Position
+    @include adaptiveValue('padding-top', 90, 40);
+    // Grid
+    display: grid;
+    grid-template: auto / repeat(2, minmax(toRem(350), 1fr));
+    // Decor
+    border-left: $projectBorder;
+    @media (max-width: $mobile) {
+      grid-template-columns: auto;
+      border-left: 0;
+    }
+  }
+  // .project-bottom__content-item
+  &__content-item {
   }
 }
+
 .bottom-content {
   // .bottom-content__column-first
   &__column-first {
@@ -325,6 +363,15 @@
       height: toRem(1);
       background: #d0d0d0;
     }
+    transition: all 0.5s;
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.05);
+      }
+      &:hover::before {
+        color: #adc140;
+      }
+    }
   }
   // .bottom-item__descr
   &__descr {
@@ -334,6 +381,14 @@
   }
   ._icon-arrow {
     font-size: toRem(23);
+  }
+  opacity: 0;
+  transform: translate(0px, 50px);
+  transition: all 0.5s ease-in;
+
+  &._watcher-view {
+    opacity: 1;
+    transform: translate(0px, 0px);
   }
 }
 
