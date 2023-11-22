@@ -202,9 +202,15 @@
   }
   &:nth-child(6) {
     transition-delay: 0.8s;
+    @media (max-width: $mobile) {
+      transition-delay: 0.2s;
+    }
   }
   &:nth-child(7) {
     transition-delay: 0.2s;
+    @media (max-width: $mobile) {
+      transition-delay: 0.4s;
+    }
   }
   &:nth-child(8) {
     transition-delay: 0.5s;
@@ -260,7 +266,7 @@
     display: inline-block;
     display: flex;
     span {
-      color: greenyellow;
+      color: #adc140;
     }
   }
   // .worthy-content__link
@@ -268,7 +274,7 @@
     transition: all 0.5s;
     @media (any-hover: hover) {
       &:hover {
-        color: greenyellow;
+        color: #adc140;
       }
     }
   }
