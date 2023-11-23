@@ -106,6 +106,9 @@
       opacity: 1;
       transform: translate(0px, 0px);
       transition-delay: 0.5s;
+      ._icon-Circle-Button {
+        animation: rotate-infinity-star 20s linear infinite 1.3s;
+      }
     }
   }
   // .worthy-header__bottom-text
@@ -136,7 +139,6 @@
     @include adaptiveValue('font-size', 100, 48);
     @include adaptiveValue('margin-right', 10, 4);
     @include adaptiveValue('margin-left', 10, 4);
-    animation: rotate-infinity-star 20s linear infinite;
   }
 }
 
