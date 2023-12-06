@@ -2,7 +2,7 @@
 .page {
   // .page__hero
   &__hero {
-    @include adaptiveValue('padding-top', 100, 72);
+    @include adaptiveValue('padding-top', 170, 150);
     @include adaptiveValue('padding-bottom', 80, 20);
   }
   // .page__find
@@ -121,11 +121,119 @@ html {
 
 // Animation
 
+@keyframes rotate-infinity-star {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
 @keyframes rotate-infinity {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce-in-fwd {
+  0% {
+    transform: scale(0);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: scale(0.7);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: scale(0.84);
+    animation-timing-function: ease-in;
+  }
+  89% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: scale(0.95);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes opacity-anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Base
+
+// data-watch
+// data-watch-once
+// data-watch-threshold="0.5"
+
+// Css
+
+// Animation
+// &._watcher-view {
+// transition: all 0.5s ease;
+// animation: name duration timing-function delay iteration-count direction fill-mode;
+// }
+
+// Animation
+// transition: all 0.5s ease;
+// animation: slideLeft 0.8s;
+
+// Slide
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translate(toRem(150), 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0, 0);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translate(toRem(-150), 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0, 0);
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+    opacity: 0;
+    transform: translate(0, toRem(70));
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0, 0);
   }
 }

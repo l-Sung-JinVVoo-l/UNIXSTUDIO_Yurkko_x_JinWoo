@@ -81,14 +81,7 @@
   @media (max-width: $mobile) {
     display: none;
   }
-  opacity: 0;
-  transform: translate(0px, 50px);
-  transition: all 0.6s;
 
-  &._watcher-view {
-    opacity: 1;
-    transform: translate(0px, 0px);
-  }
   // .clients-decor__link
   &__link {
     display: flex;
@@ -105,6 +98,18 @@
     }
     a {
       font-size: toRem(24);
+    }
+    // Animation
+    opacity: 0;
+    transform: translate(0px, 50px);
+    transition: all 0.6s;
+
+    &._watcher-view {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
+    &:last-child {
+      transition-delay: 0.3s;
     }
   }
 }
@@ -149,10 +154,28 @@
     @include adaptiveValue('gap', 180, 20);
     justify-content: space-between;
     @include adaptiveValue('margin-bottom', 36, 0);
+    // Animation
+    opacity: 0;
+    transform: translate(0px, 50px);
+    transition: all 0.5s;
+
+    &._watcher-view {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
   }
   // .clients-content__text
   &__text {
     @include adaptiveValue('margin-bottom', 62, 24);
+    // Animation
+    opacity: 0;
+    transform: translate(0px, 50px);
+    transition: all 0.5s;
+
+    &._watcher-view {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
   }
   // .clients-content__footnote
   &__footnote {
@@ -165,6 +188,7 @@
   }
   // .cli-row__text
   &__text {
+    // Animation
   }
 }
 ._icon-Forgings {
@@ -173,6 +197,17 @@
 .footnote-clients {
   display: flex;
   justify-content: space-between;
+
+  // Animation
+  opacity: 0;
+  transform: translate(0px, 50px);
+  transition: all 0.4s;
+
+  &._watcher-view {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+
   // .footnote-clients__prof
   &__prof {
     display: flex;
